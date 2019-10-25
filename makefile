@@ -1,9 +1,9 @@
 CC = gcc
-CFLAGS = `pk-config --cflags gtk+-3.0`
-LIBS = `pk-config --libs gtk+-3.0`
-TARGET = release/
+CFLAGS = `pkg-config --cflags gtk+-3.0`
+LIBS = `pkg-config --libs gtk+-3.0`
+TARGET = release/bbwchatd
 
 .PHONY = all
 
-bbwchatd: main.c 
-    ${CC} ${CFLAGS} main.c ${LIBS} -o ${TARGET}
+bbwchatcl: main.c 
+	${CC} ${CFLAGS} main.c ${LIBS} -o ${TARGET}
